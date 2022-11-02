@@ -3,13 +3,20 @@
     "customizations": {
         "vscode": {
             "extensions": [
-                "mads-hartmann.bash-ide-vscode"
+                "christian-kohler.npm-intellisense",
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"eamodio.gitlens",
+				"xabikos.JavaScriptSnippets",
+				"mikestead.dotenv",
+				"aaron-bond.better-comments",
+				"redhat.vscode-yaml",
+				"streetsidesoftware.code-spell-checker",
+				"vscode-icons-team.vscode-icons"
             ]
         }
     },
-    "features": {
-        "ghcr.io/devcontainers/features/docker-in-docker:1": {}
-    },
-    "remoteUser": "node",
-    "postCreateCommand": "npm install -g @devcontainers/cli"
+	"postAttachCommand": "npm install && npm run dev",
+    "forwardPorts": [3000],
+    "remoteUser": "node"
 }
